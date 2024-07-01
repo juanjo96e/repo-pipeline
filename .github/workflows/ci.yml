@@ -10,15 +10,14 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # Actualizado a v3
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4  # Actualizado a v4
       with:
         python-version: '3.8'
 
@@ -29,6 +28,4 @@ jobs:
 
     - name: Run tests
       run: |
-        # Aquí puedes agregar comandos para ejecutar tus pruebas
-        # Por ejemplo, si tienes pruebas en un archivo test_app.py
         pytest test_app.py
